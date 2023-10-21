@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
   app.use('/bouns', rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour
-    max: 1, // 1 requests per hour
+    max: 1, //1 requests per hour
     message: 'You have exceeded the rate limit for this endpoint.',
   }));
   
