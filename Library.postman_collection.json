@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "7b6abc95-d8a0-430b-84f3-ec89284ca75b",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29878609"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "create-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Operating System\",\r\n    \"author\": \"hossam\",\r\n    \"isbn\": \"OS00\",\r\n    \"quantity\": 5,\r\n    \"shelf_location\": \"D1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/books/create-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"create-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Data Structure\",\r\n    \"author\": \"ali\",\r\n    \"isbn\": \"DS00\",\r\n    \"quantity\": 5,\r\n    \"shelf_location\": \"A1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/books/search-books?query=ali",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"search-books"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ali"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrower",
+			"item": [
+				{
+					"name": "register-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tarek\",\r\n    \"email\": \"tarek@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/borrowers/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ali\",\r\n    \"email\":\"yasser@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/borrowers/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/borrowers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/borrowers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-out-book-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\":2,\r\n    \"borrowerId\":3,\r\n    \"endDate\": \"2023-10-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/borrowers/check-out-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"check-out-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return-book-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\":1,\r\n    \"borrowerId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/borrowers/return-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"return-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-check-book-borrower",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/borrowers/get-borrowed-books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"borrowers",
+								"get-borrowed-books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "System",
+			"item": [
+				{
+					"name": "checked-all-book",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/system/get-all-books-checked",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"system",
+								"get-all-books-checked"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "books-overdue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/system/get-books-overdue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"system",
+								"get-books-overdue"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bouns",
+			"item": [
+				{
+					"name": "export_book_borrowings_csv",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bouns/export_book_borrowings_csv?startDate=2023-09-21&endDate=2023-10-21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bouns",
+								"export_book_borrowings_csv"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-09-21"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-10-21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export_last_month_book_borrowings_csv",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bouns/export_last_month_book_borrowings_csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bouns",
+								"export_last_month_book_borrowings_csv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export_last_month_overdue_book_borrowings_csv",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "islam",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "islam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/bouns/export_last_month_overdue_book_borrowings_csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bouns",
+								"export_last_month_overdue_book_borrowings_csv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
