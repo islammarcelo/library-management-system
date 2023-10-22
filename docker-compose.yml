@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+
+    
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: library
+    ports:
+      - "3307:3306"  
+    volumes:
+      - ./src/service/libdate.sql:/docker-entrypoint-initdb.d/libdate.sql
+
+ 

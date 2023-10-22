@@ -13,3 +13,6 @@ How to start the application (npm run start:dev)
 
 <h3>Testing:</h3>
 How to run test (npm run test)
+
+<h3>Docekr:</h3>
+How to run Docker Compose (docker-compose up --build)
